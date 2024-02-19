@@ -138,6 +138,12 @@ nav {
     flex-direction: row;
     background-color: transparent;
   }
+   .container__grid {
+    padding-top: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
 
 }
 
