@@ -552,8 +552,8 @@ nav {
   }
   .title1{
     position: absolute;
-    top: 60%;
-    left: 50%;
+    top: 65%;
+    left: 55%;
     transform: translate(-50%,-50%);
     font-size: 60px;
     /* -webkit-text-stroke: 1px #fff; */
