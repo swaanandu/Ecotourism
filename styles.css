@@ -189,6 +189,46 @@ nav {
 
 
 
+@media (width < 600px) {
+  .title{
+    position: absolute;
+    top: 45%;
+    left: 55%;
+    transform: translate(-50%,-50%);
+    font-size: 60px;
+    /* -webkit-text-stroke: 1px #fff; */
+    color: transparent;
+    background-image: linear-gradient(#fff,#fff);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -750px 0;
+    animation: backcolor 5s linear infinite alternate;
+  }
+  .title1{
+    position: absolute;
+    top: 70%;
+    left: 55%;
+    transform: translate(-50%,-50%);
+    font-size: 60px;
+    /* -webkit-text-stroke: 1px #fff; */
+    color: transparent;
+    background-image: linear-gradient(#fff,#fff);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -750px 0;
+    animation: backcolor 5s linear infinite alternate;
+  }
+  @keyframes backcolor{
+    100%{
+        background-position: 0 0;
+    }
+  }
+  @keyframes backcolor{
+    100%{
+        background-position: 0 0;
+    }
+  }
+  }
 
 
 
