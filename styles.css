@@ -29,7 +29,7 @@ body {
  
 .header-container {
   min-height: 100vh;
-  background-image: url("homstay.jpg");
+  background-image: url("images/homstay.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -146,7 +146,44 @@ nav {
 
 }
 
-
+.title{
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 60px;
+  /* -webkit-text-stroke: 1px #fff; */
+  color: transparent;
+  background-image: linear-gradient(#fff,#fff);
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-position: -750px 0;
+  animation: backcolor 5s linear infinite alternate;
+}
+.title1{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 60px;
+  /* -webkit-text-stroke: 1px #fff; */
+  color: transparent;
+  background-image: linear-gradient(#fff,#fff);
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-position: -750px 0;
+  animation: backcolor 5s linear infinite alternate;
+}
+@keyframes backcolor{
+  100%{
+      background-position: 0 0;
+  }
+}
+@keyframes backcolor{
+  100%{
+      background-position: 0 0;
+  }
+}
 
 
 
@@ -500,48 +537,6 @@ nav {
     grid-template-columns: repeat(2, 1fr);
   }
 
-}
-
-@media (width > 768px) {
-  .title{
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 60px;
-    /* -webkit-text-stroke: 1px #fff; */
-    color: transparent;
-    background-image: linear-gradient(#fff,#fff);
-    background-repeat: no-repeat;
-    -webkit-background-clip: text;
-    background-position: -750px 0;
-    animation: backcolor 5s linear infinite alternate;
-  }
-  .title1{
-    position: absolute;
-    top: 65%;
-    left: 55%;
-    transform: translate(-50%,-50%);
-    font-size: 60px;
-    /* -webkit-text-stroke: 1px #fff; */
-    color: transparent;
-    background-image: linear-gradient(#fff,#fff);
-    background-repeat: no-repeat;
-    -webkit-background-clip: text;
-    background-position: -750px 0;
-    animation: backcolor 5s linear infinite alternate;
-  }
-
-  @keyframes backcolor{
-    100%{
-        background-position: 0 0;
-    }
-  }
-  @keyframes backcolor{
-    100%{
-        background-position: 0 0;
-    }
-  }
 }
 
 
