@@ -562,7 +562,11 @@ nav {
 
 @media (width < 600px) {
   .nav__links {
-    display: none;
+    gap: 1rem;
+  }
+
+  .link a {
+    padding: 0;
   }
 
   .header__form form {
