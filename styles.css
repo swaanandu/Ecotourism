@@ -162,7 +162,7 @@ section{
 
 .home{
   min-height: 95vh;
-  background: url(images/homstay.jpg) no-repeat;
+  background: url(homstay.jpg) no-repeat;
   background-position: center !important;
   background-size: cover !important;
   position: relative;
