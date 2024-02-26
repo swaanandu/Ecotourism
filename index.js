@@ -1,63 +1,39 @@
-const menuBtn = document.getElementById("menu-btn");
-const navLinks = document.getElementById("nav-links");
-const menuBtnIcon = menuBtn.querySelector("i");
+$(document).ready(function(){
 
-menuBtn.addEventListener("click", (e) => {
-  navLinks.classList.toggle("open");
+    $('#login-btn').click(function(){
+        $('.login-form').toggleClass('active');
+        $('#menu-btn').removeClass('fa-times');
+        $('.navbar').removeClass('active');
+    });
 
-  const isOpen = navLinks.classList.contains("open");
-  menuBtnIcon.setAttribute(
-    "class",
-    isOpen ? "ri-close-line" : "ri-menu-3-line"
-  );
+    $('#menu-btn').click(function(){
+        $(this).toggleClass('fa-times');
+        $('.navbar').toggleClass('active');
+        $('.login-form').removeClass('active');
+    })
+
+    $(window).on('scroll load', function(){
+
+        $('#menu-btn').removeClass('fa-times');
+        $('.navbar').removeClass('active');
+        $('.login-form').removeClass('active');
+
+        $('section').each(function(){
+
+            let top = $(window).scrollTop();
+            let height = $(this).height();
+            let offset = $(this).offset().top - 200;
+            let id = $(this).attr('id');
+    
+            if(top >= offset && top < offset + height){
+                $('.navbar a').removeClass('active');
+                $('.navbar').find(`[href="#${id}"]`).addClass('active');
+            }
+    
+        });
+
+    });
+
 });
 
-navLinks.addEventListener("click", (e) => {
-  navLinks.classList.remove("open");
-  menuBtnIcon.setAttribute("class", "ri-menu-3-line");
-});
-const scrollRevealOption = {
-  distance: "50px",
-  origin: "bottom",
-  duration: 1000,
-};
 
-// header container
-ScrollReveal().reveal(".header__container h1", {
-  ...scrollRevealOption,
-});
-
-ScrollReveal().reveal(".header__form", {
-  ...scrollRevealOption,
-  delay: 500,
-});
-
-// trending container
-ScrollReveal().reveal(".trending__card", {
-  ...scrollRevealOption,
-  interval: 500,
-});
-
-// destination container
-ScrollReveal().reveal(".destination__card", {
-  duration: 1000,
-  interval: 500,
-});
-
-// seller container
-ScrollReveal().reveal(".seller__card", {
-  ...scrollRevealOption,
-  interval: 500,
-});
-
-// guide container
-ScrollReveal().reveal(".guide__card", {
-  ...scrollRevealOption,
-  interval: 500,
-});
-
-//  client container
-ScrollReveal().reveal(".client__card", {
-  ...scrollRevealOption,
-  interval: 500,
-});
