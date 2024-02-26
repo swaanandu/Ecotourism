@@ -109,7 +109,7 @@
 .left{
   width: 70%;
   height: 600px;
-  background: url("images/tour1.jpg") no-repeat center / cover;
+  background: url("tour1.jpg") no-repeat center / cover;
   border-radius: 8px;
 }
 .right{
